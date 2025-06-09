@@ -54,6 +54,6 @@ let somenumber= 10
 let stringnumber= String(somenumber)
 console.log(stringnumber);
 console.log(typeof stringnumber);
-//output:
+//output:-
 //10
 //string
