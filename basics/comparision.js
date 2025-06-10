@@ -53,3 +53,28 @@ the reason is that an equality check == and comparison < > >= <= work differentl
 comparison convert null to a number, treating it as 0
 */
 
+/*
+        stack and heap memory
+
+difference:-
+
+| Feature            | Stack                        | Heap                            |
+| ------------------ | ---------------------------- | ------------------------------- |
+| Type of memory     | Static memory                | Dynamic memory                  |
+| Speed              | Faster                       | Slower                          |
+| Allocation         | Managed automatically (LIFO) | Allocated & freed as needed     |
+| Stores             | Primitives, call frames      | Objects, arrays, functions      |
+| Access             | Direct and simple            | Requires reference              |
+| Garbage collection | Not needed                   | Required and done automatically |
+     
+📌 Key Points for Interviews / Exams
+Stack: for primitive values and function call context.
+
+Heap: for non-primitives like objects, arrays, functions.
+
+Objects in heap are accessed via references stored in stack.
+
+JavaScript uses garbage collection to free up heap memory.
+
+*/
+//move to string in javascript
