@@ -105,7 +105,7 @@ function handleobject(anyobject) {
 handleobject(user);// output: Username is dhiren and id is 1234
 //In this example, the function handleobject takes an object anyobject as an argument and accesses its properties username and id to print them.
 
-/* We can also do like this
+/* We can also do like this  
   handleobject({
     username:"dhiren",
     id: 1234
@@ -124,7 +124,52 @@ console.log(secondvalue(myarray)); // output: 200
 
 //-----------------------------------------------------------------------------------------------------------------
 
+/*scopes 
+Scope refers to the visibility and accessibility of variables in different parts of your code. There are two main types of scope in JavaScript: global scope and local scope.
+Global Scope: Variables declared outside of any function or block are in the global scope. They can be accessed from anywhere in your code.
+Local Scope: Variables declared inside a function or block are in the local scope. They can only be accessed within that function or block.
 
+1. Local Scope:
+Variables declared inside a function are not accessible outside.
+function show() {
+  let message = "Hello";
+}
+console.log(message); ❌ Error
 
+2. Global Scope:
+Variables declared outside any function are global.
 
+*/
+
+ function one (){
+    const username ="one"
+    function two(){
+        const id ="1"
+        console.log(username);
+    }
+    //console.log(id);
+    //it will throw an error because id is not defined in this scope
+    two(); // calling the inner function to access the username
+    //output: one
+ }
+one(); // calling the outer function to execute the code
+//output: one
  
+/*In this example, the function one contains a variable username, and the function two is defined inside one. The function two can access the username variable, but the outer function cannot access the id variable defined in two.
+This demonstrates the concept of local scope, where variables defined inside a function are not accessible outside that function.
+*/
+
+//intresting concept
+function addone(num){
+    return num+1; // returns the number plus one
+}
+addone(5); // calling the function to add one to the number
+//output: 6
+
+//another way to write the same function  
+const addtwo = function(num){
+    return num+2; // returns the number plus two
+}
+addtwo(5); // calling the function to add two to the number
+//output: 7
+
