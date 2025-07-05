@@ -403,4 +403,122 @@ each char is o
 */
 
 
+ //map: it holds key value pair
+
+const map = new Map()
+map.set('IND', "india")
+map.set('USA',"united states of america")
+map.set('FR', "france" )
+/*
+console.log(map);
+Map(3) {
+  'IND' => 'india',
+  'USA' => 'united states of america',
+  'FR' => 'france'
+}
+  */
+for(const [key,value] of map){
+   console.log(key,':-',value);
+   }
+/*IND :- india
+USA :- united states of america
+FR :- france
+*/
+
+
+/* console.log(key); and only key is there in the loop
+[ 'IND', 'india' ]
+[ 'USA', 'united states of america' ]
+[ 'FR', 'france' ]
+ */
+
+const myobject={
+   'game1':'NBA',
+   'game2':'rdr'
+}
+/*
+for(const[Key, value] of myobject){
+    console.log(key,':-',value);
+}
+    this will not work
+*/
+
+ const object={
+   js:'javascript',
+   cpp:'c++',
+   rb:"ruby"
+ }
+ for(const key in object){
+   /*console.log(key);
+      js
+      cpp
+      rb
+      */
+   console.log(`${key} shortcut is for ${object[key]}`)
+//js shortcut is for javascript
+//cpp shortcut is for c++
+//rb shortcut is for ruby 
+}
+const lang =["js","ruby","python","cpp"]
+/*
+lang.forEach(function (val){
+   console.log(val);
+}) 
+js
+ruby
+python
+cpp
+val is parameter
  
+*/
+//lang.forEach((item) => {
+   /*console.log(item);
+   js
+ruby
+python
+cpp
+*/
+lang.forEach((item,index,arr)=>{
+console.log(item,index,arr);
+/*
+js 0 [ 'js', 'ruby', 'python', 'cpp' ]
+ruby 1 [ 'js', 'ruby', 'python', 'cpp' ]
+python 2 [ 'js', 'ruby', 'python', 'cpp' ]
+cpp 3 [ 'js', 'ruby', 'python', 'cpp' ]
+*/
+})
+
+const mycode =[
+{
+   languageName:"javascript",
+   languagefilename:"js"
+},
+
+{
+   languageName:"Cpp",
+   languagefilename:"C++"
+},
+
+{
+   languageName:"java",
+   languagefilename:"jv"
+},
+
+{
+   languageName:"ruby",
+   languagefilename:"rb"
+}
+]
+mycode.forEach((item)=>{
+   console.log(item.languageName);
+   /*
+javascript
+Cpp
+java
+ruby
+*/
+}
+)
+
+
+
