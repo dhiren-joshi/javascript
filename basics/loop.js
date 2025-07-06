@@ -520,5 +520,51 @@ ruby
 }
 )
 
+const num =[1,2,3,4,5,6,7,,8,9,10]
+const newnum = num.filter((num)=> {num > 4})
+console.log(newnum);
 
 
+
+//[] if it {} is used : {num>4} then to fix this use return {return num>4}
+
+const Newnum =[]
+num.forEach((num)=>{
+   if(num>4){
+      Newnum.push(num)
+   }
+}
+
+) 
+console.log(Newnum);
+//[ 5, 6, 7, 8, 9, 10 ]
+
+const books = [
+   { title: "Book One", genre: "Fiction", publish: 2001, edition: 1 },
+   { title: "Book Two", genre: "Science", publish: 2015, edition: 2 },
+   { title: "Book Three", genre: "Fiction", publish: 2010, edition: 3 },
+   { title: "Book Four", genre: "History", publish: 2005, edition: 1 },
+   { title: "Book Five", genre: "Science", publish: 2020, edition: 1 }
+];
+
+// Filter books published after 2010
+const recentBooks = books.filter(book => book.publish > 2010);
+console.log(recentBooks);
+
+// Filter books of genre 'Fiction'
+const fictionBooks = books.filter(book => book.genre === "Fiction");
+console.log(fictionBooks);
+
+const number = [1,2,3,4,5,6,7,8,9,10]
+const newnumber= number.map((num) => num + 10 )
+console.log(newnumber);
+/*
+[11, 12, 13, 14, 15,16, 17, 18, 19, 20]
+*/
+ const myNumbers=[1,2,3,4,5,6,7,8,9,10]
+ const newNum = myNumbers
+                     .map((num)=>num * 10)
+                     .map((num)=>num+1)
+                     .filter((num)=>num >=40)
+  console.log(newNum);
+       // output: [ 41, 51,  61, 71,81, 91, 101]              
